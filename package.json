@@ -7,7 +7,10 @@
     "start": "node dist/main/api",
     "build": "rimraf dist && tsc -p tsconfig-build.json",
     "lint": "eslint .",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest --passWithNoTests --no-cache --runInBand",
+    "test:watch": "jest -- --watch",
+    "test:coverage": "npm run test -- --coverage"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,7 @@
   },
   "homepage": "https://github.com/jhemyson/advanced-node-ts#readme",
   "devDependencies": {
+    "@types/jest": "^27.0.1",
     "@types/module-alias": "^2.0.1",
     "@types/node": "^16.9.1",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
@@ -29,7 +33,9 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.0.0",
+    "jest": "^27.1.1",
     "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.5",
     "typescript": "^4"
   },
   "dependencies": {
